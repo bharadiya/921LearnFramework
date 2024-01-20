@@ -29,3 +29,10 @@ def test_payal_data(db):
     assert payal_data['id'] == 2
     assert payal_data['name'] == 'Payal'
     assert payal_data['result'] == 'fail'
+
+
+# - create method db - remove global db as there is no global vars
+# - Add decorator on top of method - @pytest.fixture(scope=module)
+# - pass this db argument to the method or your test case
+# - Run without scope=module and with
+# - to add tear down functionality - change return to yield

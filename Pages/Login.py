@@ -13,16 +13,16 @@ class LoginPage:
 
     # Here every weblocator has method , if 5 locators on page, then 5 methods
 
-    def enterEmailOrPhoneNumber(self,driver,username):
+    def enterEmailOrPhoneNumber(self,username):
         self.driver.find_element(By.ID,self.emailOrPhoneNumber_input_id).send_keys(username)
 
-    def enterPassword(self,driver,password):
+    def enterPassword(self,password):
         self.driver.find_element(By.XPATH,self.password_input_xpath).send_keys(password)
 
-    def clickLoginButton(self,driver):
+    def clickLoginButton(self):
         self.driver.find_element(By.CSS_SELECTOR,self.loginButton_button_cssselector).click()
 
-    def getTagMessage(self,driver):
+    def getTagMessage(self):
         tagLineMsg = self.driver.find_element(By.XPATH,self.fbTagLineMessage_h2_xpath).text
         return tagLineMsg
 
